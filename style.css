@@ -1,0 +1,68 @@
+:root { 
+    --home-accent-colour: rgb(52, 77, 93);
+    --home-darker-accent-colour: rgb(28, 41, 50);
+    --home-lighter-accent-colour: rgb(92, 132, 156);
+    --home-bg-colour: rgb(20, 20, 20);
+    --header-height: 80px
+}
+body {
+    margin: 0;
+    background-color: var(--home-bg-colour);
+}
+#header {
+    position: fixed;
+    display: flex;
+    height: var(--header-height);
+    width: 100%;
+    background-color: var(--home-accent-colour);
+    border-bottom: 10px solid var(--home-darker-accent-colour);
+}
+.header-button {
+    background-color: transparent;
+    height: var(--header-height);
+    border: 0;   
+    color: white;
+    font-size: 30px;
+    border: 1px solid var(--home-darker-accent-colour);
+}
+.hdi {
+    display: none;
+}
+.header-button:hover {
+    cursor: pointer;
+    background-color: var(--home-darker-accent-colour);
+}
+.header-button:hover .hdi {
+    display: block;
+}
+#header-logo img {
+    height: inherit;
+    padding-bottom: 5px;
+}
+#header-shiva {
+    width: 20%;
+}
+#header-button-shiva {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header-button-shiva p {
+    font-family: 'BBH Hegarty', sans-serif;
+    text-decoration: underline;
+    position: relative;
+    top: 5%;
+}
+#header-button-shiva img {
+    filter: drop-shadow(2px 2px 0 white) 
+          drop-shadow(-2px -2px 0 white)
+          drop-shadow(2px -2px 0 white)
+          drop-shadow(-2px 2px 0 white);
+    height: 150%;
+    margin: 10px;
+    position: relative;
+    top: 25%;
+    right: 5%;
+    transform: rotate(10deg);
+}
