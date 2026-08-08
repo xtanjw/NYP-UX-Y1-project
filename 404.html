@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <!--If youre wondering why the css is in this html instead of style.css, this page is served when 404 happens and its likely that something broke so to be on the safe side the css will be here itself-->
+    <style>
+        
+        body {
+            text-align: center;
+            padding: 50px;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #333;
+        }
+
+        p {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 150px;
+            height: 60px;
+            padding: 10px;
+            color: #fff;
+            background: #000000;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Error 404</h1>
+    <h2>Oops! Page Not Found</h2>
+    <p>The link you followed might be broken, or the page may have been removed.</p>
+    <button class="btn" onclick="window.location.href='/'">Home</button>
+    <button class="btn" onclick="history.back()">Go Back</button>
+    <p>
+        <video width="auto" height="auto" autoplay muted playsinline loop>
+            <source src="resources/404.webm" type="video/webm">
+        </video>
+    </p>
+
+</body>
+
+</html>
