@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+<header>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js" defer></script>
+    <title>Hobbies & Such</title>
+</header>
+
+<body>
+
+    <!-- Navbar for navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">Rides&Such</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="maps.html">Maps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="community.html">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="form-area" class="form-container">
+        <form id="feedback-form">
+            <div class="form-group">
+                <label for="Email">Email address</label>
+                <input id="Email" type="email" class="form-control form-control-lg" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Issue">Please Select an Option</label>
+                <select id="Issue" class="form-control form-control-lg" required>
+                    <option selected disabled value="">Please select an option</option>
+                    <option value="Website Issues">Website Issues</option>
+                    <option value="Suggestions">Suggestions</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="TextArea">Feedback</label>
+                <textarea id="TextArea" class="form-control form-control-lg" rows="3"
+                    placeholder="Please enter feedback" required></textarea>
+            </div>
+
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-light" >Submit</button>
+                <!--Event listener-->
+                    <script>document.getElementById("feedback-form").addEventListener("submit", function (event) {event.preventDefault(); formSubmit();});</script> 
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

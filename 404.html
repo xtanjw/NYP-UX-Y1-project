@@ -10,7 +10,6 @@
         
         body {
             text-align: center;
-            padding: 50px;
             font-family: sans-serif;
         }
 
@@ -37,6 +36,10 @@
             margin-bottom: 20px;
             font-size: large;
         }
+        .video404 {
+         width: 75vw;
+         height: 65vh;
+        }
     </style>
 </head>
 
@@ -47,7 +50,7 @@
     <button class="btn" onclick="window.location.href='/'">Home</button>
     <button class="btn" onclick="history.back()">Go Back</button>
     <p>
-        <video width="auto" height="auto" autoplay muted playsinline loop>
+        <video class="video404" autoplay muted playsinline loop>
             <source src="resources/404.webm" type="video/webm">
         </video>
     </p>
