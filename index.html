@@ -2,81 +2,285 @@
 
 <html>
 <header>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <title>Hobbies & Such</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+   <link href="style.css" rel="stylesheet" type="text/css">
+   <title>Hobbies & Such</title>
 </header>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="home.html">Rides&Such</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="maps.html">Maps</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="community.html">Community</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="feedback.html">Feedback</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
+<body data-bs-theme="dark">
+
+   <!-- Navbar for navigation -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="index.html">Rides&Such</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                     data-bs-toggle="dropdown" aria-expanded="false">
+                     Maps
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                     <li><a class="dropdown-item" href="maps.html">Shiva's Map</a></li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li><a class="dropdown-item" href="https://www.google.com/maps" target="_blank">Google Maps</a>
+                     </li>
+                     <li><a class="dropdown-item"
+                           href="https://earth.google.com/web/@1.37997189,103.84875789,19.80339743a,1308.92015744d,60y,0h,0t,0r/data=CgRCAggBOgMKATBCAggASg0I____________ARAA"
+                           target="_blank">Google Earth</a></li>
+                     <li><a class="dropdown-item"
+                           href="https://experience.arcgis.com/experience/5ecb68ccb6324da29dbb580871c9957b"
+                           target="_blank">Nparks PCN Map</a></li>
+                     <li><a class="dropdown-item"
+                           href="https://upload.wikimedia.org/wikipedia/commons/5/54/SubzonesOfSingapore.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+                           target="_blank">Singapore Areas</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="community.html">Community</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="feedback.html">Feedback</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+   <!-- Carousel to showcase pictures from cycling adventures -->
+   <div id="mainCarouselContainer">
+      <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+         <div class="carousel-indicators">
             <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="Slide 1"></button>
+               aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="6" aria-label="Slide 7 "></button>
+         </div>
+         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="resources/west_coast_park.jpeg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>West Coast Park</h5>
-                    <p>Taken on 31st March 2026</p>
-                </div>
+               <img src="resources/west_coast_park.jpeg" class="d-block w-100"
+                  alt="A picture of Shiva's bike farming aura along the stoney shore of West Coast Park.">
+               <div class="carousel-caption d-none d-md-block">
+                  <h5>West Coast Park</h5>
+                  <p>Taken while on a journey to Pasir Panjang.</p>
+               </div>
             </div>
             <div class="carousel-item">
-                <img src="resources/west_coast_park.jpeg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
+               <img src="resources/bukit_gombak.png" class="d-block w-100"
+                  alt="A picture of Little Guilin or Bukit Gombak.">
+               <div class="carousel-caption d-none d-md-block">
+                  <h5>Bukit Gombak, Little Guilin</h5>
+                  <p>Shiva's favourite rock.</p>
+               </div>
             </div>
             <div class="carousel-item">
-                <img src="resources/west_coast_park.jpeg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
+               <img src="resources/bukit_timah_station.png" class="d-block w-100"
+                  alt="A picture of Bukit Timah Railway Station.">
+               <div class="carousel-caption d-none d-md-block">
+                  <h5>Bukit Timah Railway Station</h5>
+                  <p>An old railway station once served by KTM trains.</p>
+               </div>
             </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <div class="carousel-item">
+               <img src="resources/nanyang_arch.png" class="d-block w-100"
+                  alt="A picture of the Nanyang Arch in Nanyang Technological University.">
+               <div class="carousel-caption d-none d-md-block">
+                  <h5>New Nanyang Arch</h5>
+                  <p>The newer Nanyang Arch in Yunnan Park at NTU.</p>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img src="resources/rooftop_garden.png" class="d-block w-100"
+                  alt="A picture of grass and buildings taken from a carpark rooftop garden in Jurong West.">
+               <div class="carousel-caption d-none d-md-block">
+                  <h5>Jurong West</h5>
+                  <p>Taken on a carpark rooftop garden in Jurong West.</p>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img src="resources/sungei_ulu_pandan.png" class="d-block w-100"
+                  alt="A picture of the Ulu Pandan Park Connector and an old Jurong Railway Bridge crossing Sungei Ulu Pandan.">
+               <div class="carousel-caption d-none d-md-block">
+                  <h5>Old Jurong Railway Bridge</h5>
+                  <p>One of the bridges that carried the Jurong Railway, crossing over Sungei Ulu Pandan.</p>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img src="resources/bukit_panjang_cropped.jpeg" class="d-block w-100"
+                  alt="A selfie of Shiva reuniting with his bike in Bukit Panjang.">
+               <div class="carousel-caption d-none d-md-block">
+                  <h5>Bukit Panjang</h5>
+                  <p>Shiva reuniting with his bike at the Bukit Panjang LRT station.</p>
+               </div>
+            </div>
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+         </button>
+      </div>
+   </div>
+
+   <!-- Pair of cards to show biographic info about Shiva and Xavier (name, exp, stats in a table, backstory etc.) -->
+   <div class="bio-cards-container">
+      <span class="card text-center" style="width: 30rem;">
+         <img src="resources/shiva.webp" class="card-img-top"
+            alt="A selfie of Shiva about to ride off into the sunset.">
+         <div class="card-body">
+            <h5 class="card-title">Shiva Kris Chandrashekaran</h5>
+            <h6 class="card-subtitle mb-2">Avid Cyclist</h6>
+            <p class="card-text">From the industries of Jurong to the marshes of Mandai and to the hills of Bukit Timah,
+               cycling has become my favourite way of exploring. I love going on adventures and exploring new places, so
+               when I realised the potential of cycling, I never looked back. Reaching my destination, usually a park or
+               nature reserve, after a long and breathtaking journey is the most rewarding thing you can feel. I'd
+               recommend cycling to absolutely anyone!</p>
+            <!--I've tried Hot Mala in Bukit Panjang, gone hiking on old railway tracks in Clementi, and raced to Kranji and back home in 3 less hours.-->
+         </div>
+         <blockquote class="blockquote mb-0">
+            <p>"It’s a dangerous business, Frodo, going out your door. You step onto the road, and if you don’t keep
+               your feet, there’s no knowing where you might be swept off to."</p>
+            <footer class="blockquote-footer">Bilbo Baggins in <cite title="Source Title">Lord of the Rings</cite>
+            </footer>
+         </blockquote>
+         <div class="accordion accordion-flush" id="shivaAccordion">
+            <div class="accordion-item">
+               <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                     data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                     Backstory / Lore
+                  </button>
+               </h2>
+               <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#shivaAccordion">
+                  <div class="accordion-body">While wandering on Google Earth, I came across a tall cliff in Bukit
+                     Gombak. At the time, I was under the impression that Singapore was mostly developed cityscape, so
+                     to see a natural looking cliff was a surprise. I was drawn to it, I spent the next few weeks
+                     cycling further than I had ever cycled before, step by step. Until finally, one day I made the
+                     distance and found Little Guilin, a beautiful cliffside overseeing a pond. From then on, I went on
+                     more and more journeys, exploring further and further from home, discovering more and more things.
+                     From then on, cycling became a part of who I am.</div>
+               </div>
+            </div>
+            <div class="accordion-item">
+               <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                     data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                     Favourite Adventure
+                  </button>
+               </h2>
+               <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#shivaAccordion">
+                  <div class="accordion-body">I have a few favourite adventures. A quite notable one may be the time I
+                     challenged myself to cycle to the end of the Kranji PC, which I had not been to yet, and back home
+                     before 11am. I quickly got ready and left around 7.45, starting from my home in Jurong West, I rode
+                     off to Chinese Garden where I went north by Bukit Batok Road, passing Tengah and Choa Chu Kang. I
+                     reached Bukit Panjang and went along the Pang Sua Canal until I reached Sungei Kadut. I crossed the
+                     road to the Kranji PC and cycled to the end, where there was not much but a pleasant view of the
+                     reservoir and a glimpse of JB. I then raced back the way I came, reaching home before 11am, and
+                     before most of my family woke up.</div>
+               </div>
+            </div>
+            <div class="accordion-item">
+               <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                     data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                     Future Destinations
+                  </button>
+               </h2>
+               <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                  data-bs-parent="#shivaAccordion">
+                  <div class="accordion-body">
+                     Currently, I have a few things on my bucket list. Here is a table showing the distances to them:
+                     <table>
+                        <tr>
+                           <th>Destination</th>
+                           <th>Rounded Distance (km)</th>
+                           <th>Estimated Duration (hr)</th>
+                        </tr>
+                        <tr>
+                           <td>Yishun</td>
+                           <td>30</td>
+                           <td>>3</td>
+                        </tr>
+                        <tr>
+                           <td>Bukit Merah</td>
+                           <td>20</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td>NYP</td>
+                           <td>>30</td>
+                           <td>3></td>
+                        </tr>
+                        <tr>
+                           <td>Sentosa</td>
+                           <td>25</td>
+                           <td>>3</td>
+                        </tr>
+                        <tr>
+                           <td>Lim Chu Kang</td>
+                           <td>15</td>
+                           <td>>3</td>
+                        </tr>
+                        <tr>
+                           <td>JB City Square</td>
+                           <td>>30</td>
+                           <td>3 to 5 (depends on <a href="https://www.jalanow.com/johor-singapore-live-traffic-cam.htm"
+                                 target="_blank" class="card-link">jam</a>)</td>
+                        </tr>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="card-body">
+            <a href="maps.html" class="btn btn-primary">See Heatmaps</a>
+         </div>
+      </span>
+      <span class="card text-center" style="width: 30rem;">
+         <img src="resources/xavier_bike.png" class="card-img-top"
+            alt="Xavier reuniting with his long lost bike at Yio Chu Kang.">
+         <div class="card-body">
+            <h5 class="card-title">Xavier Tan Jun Wei</h5>
+            <h6 class="card-subtitle mb-2">Knows how to cycle* (citation needed)</h6>
+            <p class="card-text">I genuinely dk what to write here</p>
+         </div>
+         <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+         </ul>
+         <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+         </div>
+      </span>
+   </div>
+
+   <!-- Strava -->
+
 </body>
 
 </html>

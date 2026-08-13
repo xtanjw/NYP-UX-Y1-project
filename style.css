@@ -1,79 +1,71 @@
 :root {
-   --home-accent-colour: rgb(52, 77, 93);
-   --home-darker-accent-colour: rgb(28, 41, 50);
-   --home-lighter-accent-colour: rgb(92, 132, 156);
-   --home-bg-colour: rgb(20, 20, 20);
-   --header-height: 80px
+   --dot-bg: rgb(20, 41, 63);
+   --dot-color: rgb(58, 87, 180);
+   --dot-size: 1px;
+   --dot-space: 22px;
+   --card-bg-rgb: rgb(0, 94, 171);
+   --card-text-muted-rgb: rgb(102, 187, 236);
+   --card-darker-rgb: rgb(3, 75, 134);
 }
 
 body {
-   margin: 0;
-   background-color: var(--home-bg-colour);
-   color: white;
+   background-color: rgb(37, 61, 87);
+   background: linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), var(--dot-color);
+   cursor: url("resources/bike_cursor.png"), all-scroll;
 }
 
-#header {
+.navbar {
    position: fixed;
+   z-index: 10000;
+   width: 100vw;
+}
+
+.bio-cards-container {
    display: flex;
-   height: var(--header-height);
-   width: 100%;
-   background-color: var(--home-accent-colour);
-   border-bottom: 10px solid var(--home-darker-accent-colour);
+   justify-content: center;
 }
 
-.header-button {
-   background-color: transparent;
-   height: var(--header-height);
+.card {
+   margin: 50px;
    border: 0;
+   background-color: var(--card-bg-rgb);
    color: white;
-   font-size: 30px;
-   border: 1px solid var(--home-darker-accent-colour);
+   box-shadow: 10px 10px black;
 }
 
-.hdi {
-   display: none;
+.card-subtitle,
+.blockquote-footer {
+   color: var(--card-text-muted-rgb);
 }
 
-.header-button:hover {
-   cursor: pointer;
-   background-color: var(--home-darker-accent-colour);
-}
-
-.header-button:hover .hdi {
-   display: block;
-}
-
-#header-logo img {
-   height: inherit;
-   padding-bottom: 5px;
-}
-
-#header-shiva {
-   width: 20%;
-}
-
-#header-button-shiva {
+#mainCarouselContainer {
    width: 100%;
    display: flex;
    justify-content: center;
-   align-items: center;
 }
 
-#header-button-shiva p {
-   font-family: 'BBH Hegarty', sans-serif;
-   text-decoration: underline;
-   position: relative;
-   top: 5%;
+#mainCarousel {
+   width: 90%;
+   box-shadow: 10px 10px black;
 }
 
-#header-button-shiva img {
-   filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px -2px 0 white) drop-shadow(2px -2px 0 white) drop-shadow(-2px 2px 0 white);
-   height: 150%;
-   margin: 10px;
-   position: relative;
-   top: 25%;
-   right: 5%;
-   transform: rotate(10deg);
+.accordion-item {
+   background-color: var(--card-bg-rgb);
+}
+
+.accordion-button {
+   background-color: var(--card-darker-rgb);
+   color: white;
+   font-weight: bold;
+}
+
+.card-link {
+   color: lightblue;
+}
+
+.map-viewer iframe {
+   width: 100%;
+   height: 99vh;
 }
 
 .form-container {
@@ -87,9 +79,11 @@ body {
    justify-content: center;
    margin-top: 30px;
 }
+
 .routeimg {
    width: 75%;
 }
+
 .card-body {
    color: black;
 }

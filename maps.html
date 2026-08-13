@@ -13,6 +13,8 @@
 </header>
 
 <body>
+
+   <!-- Navbar for navigation -->
    <!-- Navbar for navigation -->
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -27,7 +29,7 @@
                   <a class="nav-link" aria-current="page" href="index.html">Home</a>
                </li>
                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                      data-bs-toggle="dropdown" aria-expanded="false">
                      Maps
                   </a>
@@ -50,40 +52,18 @@
                   </ul>
                </li>
                <li class="nav-item">
-                  <a class="nav-link active" href="community.html">Community</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="feedback.html">Feedback</a>
+                  <a class="nav-link" href="community.html">Community</a>
                </li>
             </ul>
          </div>
       </div>
    </nav>
-   <div class="routevote">
-      <table>
-         <caption>Vote for a route!</caption>
-         <tr>
-            <th>Route Name</th>
-            <td>placeholder</td>
-            <td>placeholder 2</td>
-         </tr>
-         <tr>
-            <th>Distance</th>
-            <td>15KM</td>
-            <td>100m</td>
-         </tr>
-         <tr>
-            <th>Est Time</th>
-            <td>100days</td>
-            <td>5 microseconds</td>
-         </tr>
-         <tr>
-            <th>Image of route</th>
-            <td><img src="resources/HobbiesAndSuchLogo.png" class="routeimg" alt="route 1"></td>
-            <td><img src="resources/HobbiesAndSuchLogo.png" class="routeimg" alt="route 2"></td>
-         </tr>
-      </table>
-   </div>
-</body>
 
-</html>
+   <!-- Map of Places and Tidbits -->
+   <div class="map-viewer">
+      <iframe
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d452725.1770054591!2d103.5145767725319!3d1.31466494101952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da11238a8b9375%3A0x887869cf52abf5c4!2sSingapore!5e1!3m2!1sen!2ssg!4v1786591366593!5m2!1sen!2ssg"
+         style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+   </div>
+
+</body>
