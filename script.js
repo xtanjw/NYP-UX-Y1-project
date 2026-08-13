@@ -69,3 +69,21 @@ function postSubmit(hash, email, option, feedback) {
         </div>
     `;
 }
+let C2CVotes = Math.floor(Math.random() * 951) + 50;
+let RIRVotes = Math.floor(Math.random() * 951) + 50;
+
+// Display initial votes
+document.getElementById("C2CV").textContent = C2CVotes;
+document.getElementById("RIRV").textContent = RIRVotes;
+
+// C2C vote button
+document.getElementById("C2C").addEventListener("click", function () {
+   C2CVotes++;
+   document.getElementById("C2CV").textContent = C2CVotes;
+});
+
+// RIR vote button
+document.getElementById("RIR").addEventListener("click", function () {
+   RIRVotes++;
+   document.getElementById("RIRV").textContent = RIRVotes;
+});

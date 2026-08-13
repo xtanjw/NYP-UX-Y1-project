@@ -10,6 +10,7 @@
       crossorigin="anonymous"></script>
    <link href="style.css" rel="stylesheet" type="text/css">
    <title>Hobbies & Such</title>
+   <script src="script.js" defer></script>
 </header>
 
 <body>
@@ -59,28 +60,34 @@
          </div>
       </div>
    </nav>
+   <br>
    <div class="routevote">
       <table>
          <caption>Vote for a route!</caption>
          <tr>
             <th>Route Name</th>
-            <td>placeholder</td>
-            <td>placeholder 2</td>
+            <td>Coast to Coast</td>
+            <td>Round Island Route</td>
          </tr>
          <tr>
             <th>Distance</th>
-            <td>15KM</td>
-            <td>100m</td>
+            <td>36KM</td>
+            <td>75KM</td>
          </tr>
          <tr>
-            <th>Est Time</th>
-            <td>100days</td>
-            <td>5 microseconds</td>
+            <th>Current votes</th>
+            <td id="C2CV"></td>
+            <td id="RIRV"></td>
          </tr>
          <tr>
             <th>Image of route</th>
-            <td><img src="resources/HobbiesAndSuchLogo.png" class="routeimg" alt="route 1"></td>
-            <td><img src="resources/HobbiesAndSuchLogo.png" class="routeimg" alt="route 2"></td>
+            <td><img src="resources/C2C.jpg" class="routeimg" alt="route 1"></td>
+            <td><img src="resources/RIR.jpg" class="routeimg" alt="route 2"></td>
+         </tr>
+         <tr>
+            <th>Click here to vote</th>
+            <td><button type="button" class="btn btn-light" id="C2C">Vote</button></td>
+            <td><button type="button" class="btn btn-light" id="RIR">Vote</button></td>
          </tr>
       </table>
    </div>

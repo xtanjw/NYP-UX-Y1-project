@@ -9,6 +9,7 @@
 }
 
 body {
+   margin: 0px;
    background-color: rgb(37, 61, 87);
    background: linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), var(--dot-color);
    cursor: url("resources/bike_cursor.png"), all-scroll;
@@ -16,8 +17,10 @@ body {
 
 .navbar {
    position: fixed;
+   top: 0;
+   left: 0;
    z-index: 10000;
-   width: 100vw;
+   width: 100%;
 }
 
 .bio-cards-container {
@@ -81,22 +84,26 @@ body {
 }
 
 .routeimg {
-   width: 75%;
+   width: 100%;
 }
 
 .card-body {
    color: black;
+   background-color: white;
 }
 
 table {
    width: 50%;
    border-collapse: collapse;
+   background-color: black;
+   color: white;
+   margin-top: 10px;
 }
 
 td {
    border: 1px solid black;
    padding: 8px;
-   text-align: left;
+   text-align: center;
 }
 
 th {
